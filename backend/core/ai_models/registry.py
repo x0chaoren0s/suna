@@ -206,27 +206,49 @@ class ModelRegistry:
         #     enabled=True
         # ))
         
-        # Commented out Google models as requested
-        # self.register(Model(
-        #     id="gemini/gemini-2.5-pro",
-        #     name="Gemini 2.5 Pro",
-        #     provider=ModelProvider.GOOGLE,
-        #     aliases=["gemini-2.5-pro", "Gemini 2.5 Pro"],
-        #     context_window=2_000_000,
-        #     capabilities=[
-        #         ModelCapability.CHAT,
-        #         ModelCapability.FUNCTION_CALLING,
-        #         ModelCapability.VISION,
-        #         ModelCapability.STRUCTURED_OUTPUT,
-        #     ],
-        #     pricing=ModelPricing(
-        #         input_cost_per_million_tokens=1.25,
-        #         output_cost_per_million_tokens=10.00
-        #     ),
-        #     tier_availability=["paid"],
-        #     priority=95,
-        #     enabled=True
-        # ))
+        # Google Gemini models (enabled for local development)
+        self.register(Model(
+            id="gemini/gemini-2.0-flash-exp",
+            name="Gemini 2.0 Flash",
+            provider=ModelProvider.GOOGLE,
+            aliases=["gemini-2.0-flash", "gemini-2.0-flash-exp", "Gemini 2.0 Flash", "gemini/gemini-2.0-flash"],
+            context_window=1_000_000,
+            capabilities=[
+                ModelCapability.CHAT,
+                ModelCapability.FUNCTION_CALLING,
+                ModelCapability.VISION,
+            ],
+            pricing=ModelPricing(
+                input_cost_per_million_tokens=0.00,  # Free during preview
+                output_cost_per_million_tokens=0.00
+            ),
+            tier_availability=["free", "paid"],
+            priority=97,
+            recommended=True,
+            enabled=True
+        ))
+        
+        self.register(Model(
+            id="gemini/gemini-2.5-pro",
+            name="Gemini 2.5 Pro",
+            provider=ModelProvider.GOOGLE,
+            aliases=["gemini-2.5-pro", "Gemini 2.5 Pro"],
+            context_window=2_000_000,
+            capabilities=[
+                ModelCapability.CHAT,
+                ModelCapability.FUNCTION_CALLING,
+                ModelCapability.VISION,
+                ModelCapability.STRUCTURED_OUTPUT,
+            ],
+            pricing=ModelPricing(
+                input_cost_per_million_tokens=1.25,
+                output_cost_per_million_tokens=10.00
+            ),
+            tier_availability=["free", "paid"],
+            priority=96,
+            recommended=False,
+            enabled=True
+        ))
         
         
         # self.register(Model(

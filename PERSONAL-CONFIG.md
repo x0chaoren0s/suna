@@ -119,22 +119,61 @@ REDIS_PORT=6379
 REDIS_PASSWORD=your_redis_password
 ```
 
+## 代码修改记录
+
+为了支持个人配置，以下文件已被修改（同步上游时需要注意冲突）：
+
+### 1. `backend/core/ai_models/registry.py`
+
+**修改原因**：添加 Gemini 模型支持
+
+**修改内容**：
+- 启用了 `Gemini 2.0 Flash` 模型（line ~210）
+- 启用了 `Gemini 2.5 Pro` 模型（line ~231）
+
+**同步时处理**：
+- 如果上游修改了模型列表，需要手动合并
+- 确保 Gemini 模型注册代码保留
+- 或者重新添加你需要的模型
+
+**备选方案**：
+如果经常遇到冲突，可以考虑：
+1. Fork 一个独立的模型配置分支
+2. 或者在 `backend/.env` 中设置 `DEFAULT_MODEL=gemini/gemini-2.0-flash-exp`
+
 ## 同步上游更新
 
-现在你基于 `upstream/main` 工作，同步更新非常简单：
+现在你基于 `upstream/main` 工作，同步更新相对简单：
 
 ```bash
 # 获取上游更新
 git fetch upstream
 
-# 合并到本地
+# 合并到本地（可能有冲突）
 git pull upstream main
+
+# 检查冲突文件
+git status
+
+# 如果有冲突，手动解决后：
+git add .
+git commit -m "merge: resolve conflicts with upstream"
 
 # 推送到你的远程仓库
 git push origin main
 ```
 
 或者使用 Cursor 命令：`/check-upstream`
+
+### 处理合并冲突
+
+如果 `backend/core/ai_models/registry.py` 有冲突：
+
+1. 打开文件，找到冲突标记 `<<<<<<<`, `=======`, `>>>>>>>`
+2. 保留你的 Gemini 模型注册代码
+3. 合并上游的其他模型更新
+4. 删除冲突标记
+5. 测试确保模型列表正常显示
 
 ## 安全最佳实践
 
