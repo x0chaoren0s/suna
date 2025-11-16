@@ -209,6 +209,9 @@ dump.rdb
 .cwc/
 
 
+# Node.js dependencies
+node_modules/
+
 # mobile specific
 apps/mobile/node_modules/
 apps/mobile/.expo/
