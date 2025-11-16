@@ -1,4 +1,4 @@
 # SpecStory explanation file
 /.what-is-this.md
-# SpecStory project identity file
-/.project.json
+# Exclude history directory - SpecStory will sync via cloud_sync
+/history
