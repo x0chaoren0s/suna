@@ -1,0 +1,370 @@
+# ============================================================================
+# KORTIX/SUNA GITIGNORE - COMPREHENSIVE IGNORE RULES
+# ============================================================================
+# This .gitignore is optimized for the Kortix/Suna AI platform with:
+# - Backend (Python/FastAPI)
+# - Frontend (Next.js/TypeScript)
+# - Mobile App (React Native/Expo)
+# - SDK (Python)
+# - Docker deployment
+# ============================================================================
+
+# ============================================================================
+# GENERAL FILES AND OS ARTIFACTS
+# ============================================================================
+
+# OS Generated Files
+.DS_Store
+**/.DS_Store
+Thumbs.db
+desktop.ini
+
+# ============================================================================
+# DEVELOPMENT ENVIRONMENT AND IDEs
+# ============================================================================
+
+# IDE and Editor Files
+.vscode/settings.json
+.vscode/launch.json
+.idea/
+*.swp
+*.swo
+*~
+
+# Cursor IDE
+.cursor/
+.cursorindexing
+.cursorignore
+
+# SpecStory
+.specstory/
+*.specstory
+
+# ============================================================================
+# PYTHON - BACKEND AND SDK
+# ============================================================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff
+instance/
+.webassets-cache
+
+# Scrapy stuff
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+# .python-version
+
+# pipenv
+# Pipfile.lock
+
+# poetry
+# poetry.lock
+
+# pdm
+.pdm.lock
+.pdm.toml
+.pdm-python
+
+# PEP 582
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# ============================================================================
+# JAVASCRIPT/TYPESCRIPT - FRONTEND AND MOBILE
+# ============================================================================
+
+# Node.js
+node_modules/
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+.npm
+.yarn-integrity
+
+# Next.js
+.next/
+out/
+
+# TypeScript
+*.tsbuildinfo
+.tscache/
+
+# ============================================================================
+# MOBILE APP - REACT NATIVE/EXPO
+# ============================================================================
+
+# Mobile App Build Artifacts
+apps/mobile/android/app/build/
+apps/mobile/android/build/
+apps/mobile/android/.gradle/
+apps/mobile/android/gradle/
+apps/mobile/android/local.properties
+apps/mobile/android/app/src/debug/
+apps/mobile/android/app/src/release/
+apps/mobile/ios/build/
+apps/mobile/ios/DerivedData/
+apps/mobile/ios/Pods/
+apps/mobile/ios/*.xcworkspace/xcuserdata/
+apps/mobile/ios/*.xcodeproj/xcuserdata/
+
+# Expo
+apps/mobile/.expo/
+apps/mobile/expo-env.d.ts
+apps/mobile/.expo-shared/
+
+# Metro
+apps/mobile/.metro-health-check*
+
+# Mobile specific
+apps/mobile/dist/
+apps/mobile/web-build/
+apps/mobile/*.pem
+apps/mobile/app-example
+
+# ============================================================================
+# SDK - PYTHON PACKAGE
+# ============================================================================
+
+# SDK Build and Distribution
+sdk/dist/
+sdk/build/
+sdk/*.egg-info/
+sdk/.pytest_cache/
+
+# ============================================================================
+# LOGS AND DEBUGGING
+# ============================================================================
+
+# Log files
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Threads and workspace
+/threads
+state.json
+/workspace/
+/workspace/*
+/workspace/**
+
+# Venvy
+*.venvy/*
+*.venvy*
+
+# CodeWebChat
+.cwc/
+
+# Aider
+.aider*
+
+# ============================================================================
+# DATABASE AND STORAGE
+# ============================================================================
+
+# SQLite
+*.db
+*.sqlite
+*.sqlite3
+
+# Supabase
+backend/supabase/.branches
+backend/supabase/.temp/
+supabase/.temp/cli-latest
+supabase/.temp/gotrue-version
+supabase/.temp/pooler-url
+supabase/.temp/postgres-version
+supabase/.temp/project-ref
+supabase/.temp/rest-version
+supabase/.temp/storage-version
+
+# Redis
+redis_data
+dump.rdb
+
+# ============================================================================
+# CONFIGURATION AND SECRETS
+# ============================================================================
+
+# Environment files
+.env
+.env*.local
+.env.development
+.env.test
+.env.production
+.env.docker
+.env.scripts
+
+# Prompts
+**/.prompts/
+
+# ============================================================================
+# TEMPORARY AND SETUP FILES
+# ============================================================================
+
+# Setup progress
+.setup_progress
+.setup_env.json
+
+# Test files
+backend/.test_token_compression.py
+backend/test_token_compression_data.py
+
+# Backup files
+*.bak
+*.backup
+*.orig
+*.rej
+
+# ============================================================================
+# TESTING
+# ============================================================================
+
+# Playwright
+test-results/
+playwright-report/
+playwright/.cache/
+
+# Additional test patterns
+test/
+
+# ============================================================================
+# DOCUMENTATION AND ASSETS
+# ============================================================================
+
+# Documentation build
+docs/_build/
+docs/build/
+
+# Temporary presentation files
+backend/core/templates/presentations/temp_*
+
+# ============================================================================
+# MISCELLANEOUS
+# ============================================================================
+
+# Additional Python cache patterns
+**/__pycache__/
+
+# Expo additional patterns
+eas.json
