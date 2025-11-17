@@ -1,0 +1,16 @@
+# Suna 项目规则
+
+## 跨终端记忆通信系统
+
+本项目启用了跨终端记忆共享系统。
+
+**协议文档**: `.memory/config/MEMORY-PROTOCOL.md`
+
+当用户发送以下命令时，请按照协议执行：
+- `SYNC` 或 `同步记忆`
+- `HARVEST` 或 `收获记忆`
+- `CONSOLIDATE` 或 `整理记忆`
+- `MEMORY STATUS` 或 `记忆状态`
+
+详细说明见 `.memory/README.md`
+
