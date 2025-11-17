@@ -1,0 +1,10 @@
+# 跨终端记忆通信系统 - Git忽略规则
+
+# Terminal-specific config (like .env)
+# 每个终端维护自己的配置，不同步
+config/system.json
+
+# Logs (optional, 如果将来添加详细日志)
+logs/*.log
+logs/*.tmp
+

@@ -230,6 +230,3 @@ apps/mobile/.env*.local
 apps/mobile/app-example
 # Docker-specific env files
 *.env.docker
-
-# Memory System - Terminal-specific config (like .env)
-.memory/config/system.json
