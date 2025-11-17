@@ -60,7 +60,23 @@
       "archive_path": "archives/xiaohei_local/2025-11-17_001.md",
       "section_in_archive": "## 功能和特性 - AI模型注册和排序规范"
     }
+    ,
+    {
+      "id": "mem_20251117_005",
+      "type": "short_term",
+      "category": "work_in_progress",
+      "source_terminal": "xiaohei_local",
+      "source_terminal_display": "【小黑：本地】",
+      "created_at": "2025-11-17T09:13:38Z",
+      "title": "部署biye项目跨终端记忆系统",
+      "summary": "规划将suna记忆机制部署到biye项目：方案探讨完成（推荐框架化+双记忆）、实施策略确定（渐进式MVP）、等待biye信息继续",
+      "tags": ["biye", "deployment", "memory-system", "cross-terminal", "planning"],
+      "learned_by": ["xiaohei_local"],
+      "status": "active",
+      "archive_path": "archives/xiaohei_local/2025-11-17_002.md",
+      "section_in_archive": "## 短期记忆 - 部署biye项目跨终端记忆系统"
+    }
   ],
-  "last_memory_id": 4,
+  "last_memory_id": 5,
   "version": "1.0.0"
 }
