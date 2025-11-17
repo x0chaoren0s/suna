@@ -71,12 +71,42 @@
       "title": "部署biye项目跨终端记忆系统",
       "summary": "规划将suna记忆机制部署到biye项目：方案探讨完成（推荐框架化+双记忆）、实施策略确定（渐进式MVP）、等待biye信息继续",
       "tags": ["biye", "deployment", "memory-system", "cross-terminal", "planning"],
-      "learned_by": ["xiaohei_local", "dahei_biye_win10_ubuntu"],
+      "learned_by": ["xiaohei_local", "dahei_biye_win10_ubuntu_suna"],
       "status": "active",
       "archive_path": "archives/xiaohei_local/2025-11-17_002.md",
       "section_in_archive": "## 短期记忆 - 部署biye项目跨终端记忆系统"
+    },
+    {
+      "id": "mem_20251117_006",
+      "type": "short_term",
+      "category": "work_in_progress",
+      "source_terminal": "dahei_biye_win10_ubuntu_suna",
+      "source_terminal_display": "【大黑-毕业win10：Ubuntu：suna】",
+      "created_at": "2025-11-17T11:37:11Z",
+      "title": "部署biye项目跨终端记忆系统（进展更新）",
+      "summary": "澄清终端架构（3个终端）、调整实施策略（3阶段）、克隆suna到biye目录、准备切换workspace",
+      "tags": ["biye", "deployment", "memory-system", "progress-update"],
+      "learned_by": ["dahei_biye_win10_ubuntu_suna"],
+      "status": "active",
+      "archive_path": "archives/dahei_biye_win10_ubuntu_suna/2025-11-17_002.md",
+      "section_in_archive": "## 短期记忆 - 部署biye项目跨终端记忆系统（进展更新）"
+    },
+    {
+      "id": "mem_20251117_007",
+      "type": "short_term",
+      "category": "configuration",
+      "source_terminal": "dahei_biye_win10_ubuntu_suna",
+      "source_terminal_display": "【大黑-毕业win10：Ubuntu：suna】",
+      "created_at": "2025-11-17T11:37:11Z",
+      "title": "终端命名规范更新",
+      "summary": "终端名称改为【计算机：环境：项目】格式，通知【小黑：本地】同步更新",
+      "tags": ["configuration", "naming-convention", "terminal-identity"],
+      "learned_by": ["dahei_biye_win10_ubuntu_suna"],
+      "status": "active",
+      "archive_path": "archives/dahei_biye_win10_ubuntu_suna/2025-11-17_002.md",
+      "section_in_archive": "## 短期记忆 - 终端命名规范更新"
     }
   ],
-  "last_memory_id": 5,
+  "last_memory_id": 7,
   "version": "1.0.0"
 }
