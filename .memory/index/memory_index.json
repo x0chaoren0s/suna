@@ -29,8 +29,23 @@
       "status": "active",
       "archive_path": "archives/dahei_biye_win10_ubuntu/2025-11-17_001.md",
       "section_in_archive": "## 中期记忆 - 跨终端记忆通信系统"
+    },
+    {
+      "id": "mem_20251117_003",
+      "type": "medium_term",
+      "category": "environment",
+      "source_terminal": "xiaohei_local",
+      "source_terminal_display": "【小黑：本地】",
+      "created_at": "2025-11-17T14:15:20Z",
+      "title": "Windows Git 中文乱码问题解决",
+      "summary": "Windows Git 中文乱码：原因（GBK/UTF-8冲突）、解决方案（Git/PowerShell/CMD UTF-8配置）、已解决",
+      "tags": ["git", "windows", "encoding", "utf-8", "troubleshooting"],
+      "learned_by": ["xiaohei_local"],
+      "status": "active",
+      "archive_path": "archives/xiaohei_local/2025-11-17_001.md",
+      "section_in_archive": "## 中期记忆 - Windows Git 中文乱码问题解决"
     }
   ],
-  "last_memory_id": 2,
+  "last_memory_id": 3,
   "version": "1.0.0"
 }

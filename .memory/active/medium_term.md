@@ -1,6 +1,6 @@
 # 中期记忆（活跃）
 
-> 最后更新：2025-11-17T05:13:33Z
+> 最后更新：2025-11-17T14:15:20Z
 
 ## 工具和脚本
 
@@ -47,11 +47,31 @@
 
 ## 已解决问题
 
-（暂无）
+### Windows Git 中文乱码问题解决
+**ID**: mem_20251117_003
+**来源**: 【小黑：本地】@ 2025-11-17
+**标签**: git, windows, encoding, utf-8, troubleshooting
+
+**简述**: Windows Git 中文乱码：原因（GBK/UTF-8冲突）、解决方案（Git/PowerShell/CMD UTF-8配置）、已解决
+
+**问题原因**：
+- Windows 终端默认 GBK（936），Git 提交消息使用 UTF-8
+- Git 未配置编码设置
+- PowerShell/CMD 未设置 UTF-8
+
+**解决方案**：
+- Git：`i18n.commitencoding=utf-8`, `i18n.logoutputencoding=utf-8`
+- PowerShell：配置文件设置 UTF-8 编码
+- CMD：注册表设置代码页 65001
+- 修复乱码提交：使用 `git commit --amend -F` 通过文件传递
+
+**状态**: ✓ 已解决
+
+**详情**: 见 archives/xiaohei_local/2025-11-17_001.md
 
 ## 环境配置
 
 （暂无）
 
 ---
-**总计**: 2条中期记忆
+**总计**: 3条中期记忆
