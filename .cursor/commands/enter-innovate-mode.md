@@ -1,0 +1,2 @@
+ENTER INNOVATE MODE
+请进入创新模式

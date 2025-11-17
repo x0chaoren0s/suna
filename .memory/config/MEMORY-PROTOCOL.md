@@ -289,10 +289,37 @@ Git推送到memory分支
 - **原因**：保持国际标准，便于跨时区协作
 
 **时间获取标准方法**：
-- **获取UTC时间**：`date -u +"%Y-%m-%dT%H:%M:%SZ"`
 - **严禁手动编造时间**：必须使用系统命令获取实际当前时间
 - **示例输出**：`2025-11-17T07:57:39Z`
 - **显示转换**：将UTC时间加8小时后以 `YYYY-MM-DD HH:MM` 格式显示
+
+**跨平台时间获取命令**：
+
+1. **Linux/macOS/Git Bash**：
+   ```bash
+   date -u +"%Y-%m-%dT%H:%M:%SZ"
+   ```
+
+2. **Windows PowerShell**：
+   ```powershell
+   Get-Date -Format 'yyyy-MM-ddTHH:mm:ssZ' -AsUTC
+   # 或使用：date -u +"%Y-%m-%dT%H:%M:%SZ"（如果安装了Git Bash）
+   ```
+
+3. **Windows CMD（不推荐）**：
+   ```cmd
+   powershell -Command "Get-Date -Format 'yyyy-MM-ddTHH:mm:ssZ' -AsUTC"
+   ```
+
+4. **Python（通用备选）**：
+   ```python
+   python -c "from datetime import datetime; print(datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ'))"
+   ```
+
+**AI执行建议**：
+- 优先使用 `date -u` 命令（适用于Linux/macOS/Git Bash/PowerShell）
+- 如果命令失败，自动切换到PowerShell或Python方法
+- 确保获取的是UTC时间（带 `Z` 后缀）
 - 列表标记：•（bullet point）
 - 记忆描述风格：简短、准确、关键词突出
 
@@ -498,9 +525,13 @@ else:
 
 将当前终端ID添加到已学习记忆的`learned_by`列表中。
 
-**重要**：使用系统命令获取实际当前时间更新 last_sync：
+**重要**：使用系统命令获取实际当前时间更新 last_sync（参考协议第291-322行的跨平台命令）：
 ```bash
+# Linux/macOS/Git Bash/PowerShell
 date -u +"%Y-%m-%dT%H:%M:%SZ"
+
+# Windows PowerShell (备选)
+Get-Date -Format 'yyyy-MM-ddTHH:mm:ssZ' -AsUTC
 ```
 
 更新`learning_status.json`和`system.json`：
@@ -637,9 +668,19 @@ AI基于分析结果进行推断：
 
 基于确认后的信息，生成结构化的记忆。
 
-**重要**：使用系统命令获取实际当前时间，禁止手动编造：
+**重要**：使用系统命令获取实际当前时间，禁止手动编造。
+
+**跨平台命令**（参考协议第291-322行）：
 ```bash
+# Linux/macOS/Git Bash/PowerShell
 date -u +"%Y-%m-%dT%H:%M:%SZ"
+
+# Windows PowerShell (备选)
+Get-Date -Format 'yyyy-MM-ddTHH:mm:ssZ' -AsUTC
+
+# Python (通用备选)
+python -c "from datetime import datetime; print(datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ'))"
+
 # 输出示例：2025-11-16T18:45:23Z
 ```
 
