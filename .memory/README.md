@@ -27,18 +27,23 @@ cp .memory/config/system.json.example .memory/config/system.json
 ```json
 {
   "version": "1.0.0-mvp",
-  "current_terminal_id": "YOUR_TERMINAL_ID",  // 改成你的ID，如：xiaohei_local
+  "current_terminal_id": "YOUR_TERMINAL_ID",    // 改成你的ID，如：xiaohei_local
+  "display_name": "【计算机名：环境名】",        // 改成你的显示名称，如：【小黑：本地】
   "memory_branch": "memory",
   "last_harvest": null,
   "last_sync": null,
-  "created_at": "2025-11-17T00:00:00Z"  // 改成当前时间
+  "created_at": "2025-11-17T00:00:00Z"         // 改成当前时间
 }
 ```
 
-**终端ID命名规范**：
-- 格式：`计算机名_环境` （如：xiaohei_local, dahei_ubuntu）
-- 使用小写字母和下划线
-- 要唯一，不与其他终端重复
+**终端标识命名规范**：
+- **terminal_id**（英文ID）：
+  - 格式：`计算机名_环境` （如：xiaohei_local, dahei_ubuntu）
+  - 使用小写字母和下划线
+  - 要唯一，不与其他终端重复
+- **display_name**（中文显示名）：
+  - 格式：`【计算机名：环境名】` （如：【小黑：本地】、【大黑-毕业win10：Ubuntu】）
+  - 用于在输出中友好显示
 
 ### 4. 在Cursor中执行首次同步
 
