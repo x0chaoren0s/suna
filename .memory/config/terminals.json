@@ -1,11 +1,11 @@
 {
   "terminals": {
-    "suna_remote": {
-      "display_name": "【Suna：Remote】",
+    "dahei_biye_win10_ubuntu": {
+      "display_name": "【大黑-毕业win10：Ubuntu】",
       "hostname": "xxy",
-      "environment": "Remote Server",
+      "environment": "Ubuntu",
       "first_seen": "2025-11-17T00:00:00Z",
-      "last_active": "2025-11-17T00:00:00Z"
+      "last_active": "2025-11-17T04:39:02Z"
     }
   }
 }
