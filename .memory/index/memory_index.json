@@ -40,12 +40,27 @@
       "title": "Windows Git 中文乱码问题解决",
       "summary": "Windows Git 中文乱码：原因（GBK/UTF-8冲突）、解决方案（Git/PowerShell/CMD UTF-8配置）、已解决",
       "tags": ["git", "windows", "encoding", "utf-8", "troubleshooting"],
-      "learned_by": ["xiaohei_local"],
+      "learned_by": ["xiaohei_local", "dahei_biye_win10_ubuntu"],
       "status": "active",
       "archive_path": "archives/xiaohei_local/2025-11-17_001.md",
       "section_in_archive": "## 中期记忆 - Windows Git 中文乱码问题解决"
+    },
+    {
+      "id": "mem_20251117_004",
+      "type": "medium_term",
+      "category": "configuration",
+      "source_terminal": "xiaohei_local",
+      "source_terminal_display": "【小黑：本地】",
+      "created_at": "2025-11-17T14:30:00Z",
+      "title": "AI模型注册和排序规范",
+      "summary": "AI模型注册表配置：按能力排序（priority 10-80）、8个已注册模型、默认模型统一（gpt-4o-mini）、上游检查流程",
+      "tags": ["ai-models", "registry", "configuration", "best-practices"],
+      "learned_by": ["xiaohei_local", "dahei_biye_win10_ubuntu"],
+      "status": "active",
+      "archive_path": "archives/xiaohei_local/2025-11-17_001.md",
+      "section_in_archive": "## 功能和特性 - AI模型注册和排序规范"
     }
   ],
-  "last_memory_id": 3,
+  "last_memory_id": 4,
   "version": "1.0.0"
 }
