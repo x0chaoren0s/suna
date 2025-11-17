@@ -71,7 +71,7 @@
       "title": "部署biye项目跨终端记忆系统",
       "summary": "规划将suna记忆机制部署到biye项目：方案探讨完成（推荐框架化+双记忆）、实施策略确定（渐进式MVP）、等待biye信息继续",
       "tags": ["biye", "deployment", "memory-system", "cross-terminal", "planning"],
-      "learned_by": ["xiaohei_local"],
+      "learned_by": ["xiaohei_local", "dahei_biye_win10_ubuntu"],
       "status": "active",
       "archive_path": "archives/xiaohei_local/2025-11-17_002.md",
       "section_in_archive": "## 短期记忆 - 部署biye项目跨终端记忆系统"
