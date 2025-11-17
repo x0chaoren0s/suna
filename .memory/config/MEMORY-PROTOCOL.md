@@ -295,30 +295,35 @@ Git推送到memory分支
 
 **跨平台时间获取命令**：
 
+**推荐方案**（已测试通过，全平台兼容）：
+
+```bash
+# 通用Python方案 - Ubuntu/PowerShell/CMD 均可用
+python -c "import datetime; print(datetime.datetime.now(datetime.UTC).strftime('%Y-%m-%dT%H:%M:%SZ'))"
+```
+
+**备选方案**（按平台）：
+
 1. **Linux/macOS/Git Bash**：
    ```bash
    date -u +"%Y-%m-%dT%H:%M:%SZ"
    ```
 
-2. **Windows PowerShell**：
+2. **Windows PowerShell**（旧版本兼容）：
+   ```powershell
+   (Get-Date).ToUniversalTime().ToString('yyyy-MM-ddTHH:mm:ssZ')
+   ```
+
+3. **Windows PowerShell**（新版本，PowerShell 7+）：
    ```powershell
    Get-Date -Format 'yyyy-MM-ddTHH:mm:ssZ' -AsUTC
-   # 或使用：date -u +"%Y-%m-%dT%H:%M:%SZ"（如果安装了Git Bash）
-   ```
-
-3. **Windows CMD（不推荐）**：
-   ```cmd
-   powershell -Command "Get-Date -Format 'yyyy-MM-ddTHH:mm:ssZ' -AsUTC"
-   ```
-
-4. **Python（通用备选）**：
-   ```python
-   python -c "from datetime import datetime; print(datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ'))"
    ```
 
 **AI执行建议**：
-- 优先使用 `date -u` 命令（适用于Linux/macOS/Git Bash/PowerShell）
-- 如果命令失败，自动切换到PowerShell或Python方法
+- **优先使用Python通用方案**（已验证跨平台兼容）
+- 如果Python不可用，根据操作系统选择备选方案
+- Linux/macOS 优先 `date -u` 命令
+- Windows 优先 PowerShell 兼容命令
 - 确保获取的是UTC时间（带 `Z` 后缀）
 - 列表标记：•（bullet point）
 - 记忆描述风格：简短、准确、关键词突出
@@ -525,13 +530,16 @@ else:
 
 将当前终端ID添加到已学习记忆的`learned_by`列表中。
 
-**重要**：使用系统命令获取实际当前时间更新 last_sync（参考协议第291-322行的跨平台命令）：
+**重要**：使用系统命令获取实际当前时间更新 last_sync（参考协议第296-327行的跨平台命令）：
 ```bash
-# Linux/macOS/Git Bash/PowerShell
+# 推荐：通用Python方案（全平台测试通过）
+python -c "import datetime; print(datetime.datetime.now(datetime.UTC).strftime('%Y-%m-%dT%H:%M:%SZ'))"
+
+# 备选：Linux/macOS/Git Bash
 date -u +"%Y-%m-%dT%H:%M:%SZ"
 
-# Windows PowerShell (备选)
-Get-Date -Format 'yyyy-MM-ddTHH:mm:ssZ' -AsUTC
+# 备选：Windows PowerShell（旧版本兼容）
+(Get-Date).ToUniversalTime().ToString('yyyy-MM-ddTHH:mm:ssZ')
 ```
 
 更新`learning_status.json`和`system.json`：
@@ -670,16 +678,16 @@ AI基于分析结果进行推断：
 
 **重要**：使用系统命令获取实际当前时间，禁止手动编造。
 
-**跨平台命令**（参考协议第291-322行）：
+**跨平台命令**（参考协议第296-327行）：
 ```bash
-# Linux/macOS/Git Bash/PowerShell
+# 推荐：通用Python方案（全平台测试通过）
+python -c "import datetime; print(datetime.datetime.now(datetime.UTC).strftime('%Y-%m-%dT%H:%M:%SZ'))"
+
+# 备选：Linux/macOS/Git Bash
 date -u +"%Y-%m-%dT%H:%M:%SZ"
 
-# Windows PowerShell (备选)
-Get-Date -Format 'yyyy-MM-ddTHH:mm:ssZ' -AsUTC
-
-# Python (通用备选)
-python -c "from datetime import datetime; print(datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ'))"
+# 备选：Windows PowerShell（旧版本兼容）
+(Get-Date).ToUniversalTime().ToString('yyyy-MM-ddTHH:mm:ssZ')
 
 # 输出示例：2025-11-16T18:45:23Z
 ```
