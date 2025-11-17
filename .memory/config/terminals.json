@@ -1,0 +1,12 @@
+{
+  "terminals": {
+    "suna_remote": {
+      "display_name": "【Suna：Remote】",
+      "hostname": "xxy",
+      "environment": "Remote Server",
+      "first_seen": "2025-11-17T00:00:00Z",
+      "last_active": "2025-11-17T00:00:00Z"
+    }
+  }
+}
+
