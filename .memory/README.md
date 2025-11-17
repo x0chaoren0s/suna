@@ -76,7 +76,7 @@ SYNC
 - 其他记忆文件（索引、归档等）会通过Git在终端间同步
 - 详细协议说明见：`config/MEMORY-PROTOCOL.md`
 
-## 当前已注册终端
+## 查看已参与终端
 
-查看 `config/terminals.json` 可以看到所有已注册的终端。
+可以从 `index/memory_index.json` 中查看所有产生过记忆的终端（每条记忆都记录了 `source_terminal_display`）。
 

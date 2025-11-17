@@ -115,7 +115,7 @@
 1. 自动检测主机名（hostname）
 2. 首次使用时询问用户环境名称
 3. 生成唯一的terminal_id（如：xiaohei_ubuntu）
-4. 注册到terminals.json
+4. 配置到 system.json（终端本地配置）
 
 ### 2.3 记忆生命周期
 
@@ -394,7 +394,7 @@ terminal_info = detect_current_terminal()
 # 返回：{"hostname": "xiaohei", "environment": "ubuntu", "terminal_id": "xiaohei_ubuntu"}
 ```
 
-如果是新终端（未在terminals.json中注册）：
+如果是新终端（首次使用）：
 ```
 检测到新终端：xiaohei
 
@@ -1226,7 +1226,7 @@ Git分支已创建：memory
 
 **检测**：
 - 系统已初始化
-- 当前终端ID不在`terminals.json`中
+- 当前终端的 `system.json` 刚创建（last_sync 为 null）
 
 **AI响应**：
 
@@ -1678,8 +1678,8 @@ AI：感谢详细说明。正在保存记忆...
 ```
 .memory/
 ├── config/
-│   ├── system.json              # 系统配置
-│   ├── terminals.json           # 终端注册表
+│   ├── system.json              # 终端配置（不同步，类似.env）
+│   ├── system.json.example      # 配置模板
 │   └── MEMORY-PROTOCOL.md       # 本协议文档
 ├── index/
 │   ├── memory_index.json        # 记忆总索引
@@ -1758,6 +1758,7 @@ Git推送到memory分支
   "type": "medium_term",
   "category": "architecture",
   "source_terminal": "xiaohei_ubuntu",
+  "source_terminal_display": "【小黑：Ubuntu】",
   "created_at": "2025-11-16T18:45:00Z",
   "title": "Redis集成完成",
   "summary": "Redis集成完成：Sentinel模式，3节点配置",
