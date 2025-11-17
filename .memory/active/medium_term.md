@@ -1,6 +1,6 @@
 # 中期记忆（活跃）
 
-> 最后更新：2025-11-17T14:15:20Z
+> 最后更新：2025-11-17T14:30:00Z
 
 ## 工具和脚本
 
@@ -43,7 +43,41 @@
 
 ## 功能和特性
 
-（暂无）
+### AI模型注册和排序规范
+**ID**: mem_20251117_004
+**来源**: 【小黑：本地】@ 2025-11-17
+**标签**: ai-models, registry, configuration, best-practices
+
+**简述**: AI模型注册表配置规范：按能力排序、默认模型统一配置、上游检查流程
+
+**模型注册规范**：
+- 所有模型按能力从弱到强排序（priority 值递增）
+- Priority 范围：10（最弱）到 80（最强）
+- 排序标准：上下文窗口大小、能力数量、能力类型（STRUCTURED_OUTPUT > VISION > FUNCTION_CALLING）
+
+**已注册模型（按能力排序）**：
+1. GPT-4o Mini (priority=10) - 128K上下文，基础能力
+2. GPT-5 Nano (priority=20) - 400K上下文，结构化输出
+3. Gemini 2.0 Flash Lite (priority=30) - 1M上下文
+4. Gemini 2.0 Flash (priority=40) - 1M上下文
+5. Gemini 2.0 Flash Exp (priority=50) - 1M上下文，推荐模型
+6. Gemini 2.5 Flash (priority=60) - 1M上下文
+7. Grok 4 Fast (priority=70) - 2M上下文，无视觉
+8. Gemini 2.5 Pro (priority=80) - 2M上下文，最强能力
+
+**默认模型配置**：
+- 统一默认模型：`openai/gpt-4o-mini`
+- 涉及文件：
+  * `backend/core/utils/project_helpers.py` (第26行)
+  * `backend/core/utils/icon_generator.py` (第133行)
+  * `backend/core/agent_setup.py` (第47行)
+
+**上游检查流程**：
+- check-upstream.md 已配置检查上述3个文件的默认 model_name
+- 合并上游更新后自动验证默认模型配置
+- 确保硬编码的 model_name 保持为 `"openai/gpt-4o-mini"`
+
+**状态**: ✓ 已实施
 
 ## 已解决问题
 
@@ -74,4 +108,4 @@
 （暂无）
 
 ---
-**总计**: 3条中期记忆
+**总计**: 4条中期记忆
